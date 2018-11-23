@@ -1,0 +1,23 @@
+{
+  "name": "supreme-enigma",
+  "version": "0.0.1",
+  "description": "Framework for my personal website.",
+  "main": "app.js",
+  "scripts": {
+    "start": "node app.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/akiraheid/supreme-enigma.git"
+  },
+  "author": "",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/akiraheid/supreme-enigma/issues"
+  },
+  "homepage": "https://github.com/akiraheid/supreme-enigma#readme",
+  "dependencies": {
+    "express": "^4.16.4",
+    "pug": "^2.0.3"
+  }
+}
