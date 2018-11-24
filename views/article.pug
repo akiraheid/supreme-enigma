@@ -6,7 +6,5 @@ html
 	body
 		include menu.pug
 		div(class='centered main-content')
-			each meta in articleMetas
-				a(href=meta.url)
-					= meta.title
+			include:markdown-it ../ARTICLE_FILE
 		include footer.pug
