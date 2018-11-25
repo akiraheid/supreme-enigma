@@ -9,7 +9,10 @@ const articleDir = 'articles'
 common.getMetas(articleDir, articleMetas, numArticles)
 
 router.get('/', (req, res) => {
-	res.send(pug.renderFile('./views/articleList.pug', {metas: articleMetas}))
+	res.send(pug.renderFile('./views/articleList.pug', {
+		metas: articleMetas,
+		title: 'Articles'
+	}))
 })
 
 // Rely on Express allowing only [A-Za-z0-9_] to prevent exploitation

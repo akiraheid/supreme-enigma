@@ -10,7 +10,10 @@ const ideaDir = 'ideas'
 common.getMetas(ideaDir, ideaMetas, numMeta)
 
 router.get('/', (req, res) => {
-	res.send(pug.renderFile('./views/articleList.pug', {metas: ideaMetas}))
+	res.send(pug.renderFile('./views/articleList.pug', {
+		metas: ideaMetas,
+		title: 'Ideas'
+	}))
 })
 
 router.get('/:idea', (req, res) => {

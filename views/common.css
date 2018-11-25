@@ -41,7 +41,19 @@ body {
 	color: black;
 }
 
-#menu a.active {
-	background-color: #4caf50;
-	color: white;
+#footer {
+	display: table;
+	border-top: solid;
+	margin-top: 1em;
+	padding-top: 0.5em;
+	margin-bottom: 1em;
+}
+
+#footer a {
+	text-decoration: none;
+}
+
+#footer div {
+	height: 2em;
+	width: 2em;
 }

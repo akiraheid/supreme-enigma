@@ -2,10 +2,10 @@ html
 	head
 		title Savage Snipe
 		style
-			include styles.css
+			include common.css
 	body
 		include menu.pug
 		div(class='centered main-content')
 			- console.log(msg)
 			h1(class='centered-text')= msg
-		include footer.pug
+			include footer.pug

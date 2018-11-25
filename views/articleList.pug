@@ -2,11 +2,15 @@ html
 	head
 		title Savage Snipe
 		style
-			include styles.css
+			include common.css
+			include articles.css
 	body
 		include menu.pug
 		div(class='centered main-content')
-			each meta in metas
-				a(href=meta.url)
-					= meta.title
-		include footer.pug
+			h1= title
+			div(id='article-list')
+				each meta in metas
+					a(href=meta.url class='article-title')
+						= meta.publishDate + ' ' + meta.title
+
+			include footer.pug
