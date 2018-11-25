@@ -6,7 +6,7 @@ html
 	body
 		include menu.pug
 		div(class='centered main-content')
-			each meta in articleMetas
+			each meta in metas
 				a(href=meta.url)
 					= meta.title
 		include footer.pug
