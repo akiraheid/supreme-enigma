@@ -11,6 +11,7 @@ const home = require('./routes/home')
 const ideas = require('./routes/ideas')
 const projects = require('./routes/projects')
 
+app.use(express.static('public'))
 app.use('/', home)
 app.use('/articles', articles)
 app.use('/ideas', ideas)
