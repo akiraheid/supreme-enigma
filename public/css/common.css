@@ -11,6 +11,11 @@ a {
 	text-decoration: none;
 }
 
+.article-title {
+	font-size: 1.5em;
+	margin-top: 1em;
+}
+
 .centered {
 	margin-left: auto;
 	margin-right: auto;

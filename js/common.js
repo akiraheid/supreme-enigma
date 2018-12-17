@@ -2,27 +2,51 @@ const fs = require('fs')
 const path = require('path')
 const pug = require('pug')
 
-exports.getMetas = (dir, metas, maxMetas) => {
-	const contentDir = path.join(process.cwd(), dir)
-	fs.readdir(contentDir, (err, files) => {
-		let metaCount = 0
-		files.forEach(file => {
-			const filePath = path.join(contentDir, file)
-			fs.stat(filePath, (err, stats) => {
-				if (metaCount++ < maxMetas && !stats.isDirectory()) {
-					fs.readFile(filePath, 'utf-8', (err, data) => {
-						const meta = {publishDate: '', title: '', url: ''}
-						data = data.split('\n')
-						meta.title = data[0].match(/[^#].*/)[0].trim()
-						meta.publishDate = data[1].match(/[0-9]{8}/)[0].trim()
-						meta.url = path.join(
-							dir, file.slice(0, file.lastIndexOf('.')))
-						metas.push(meta)
-					})
-				}
-			})
+const SUMMARY_WORDS = 100
+exports.ARTICLES_DIR = 'articles'
+exports.IDEAS_DIR = 'ideas'
+
+function getItemMeta(filePath) {
+	const data = fs.readFileSync(filePath, 'utf-8').split('\n')
+	const itemTitle = data[0].match(/[^#].*/)[0].trim()
+	const itemSummary = data.slice(1).join(' ').match(/\b.+?\b/g).slice(0, SUMMARY_WORDS).join('') + '...'
+	return {title: itemTitle, summary: itemSummary}
+}
+
+function getItems (itemsDir, start, end) {
+	const items = []
+	const contentDir = path.join(process.cwd(), itemsDir)
+	const itemsData = fs.readdirSync(contentDir).sort((a, b) => {
+		const regex = /^[0-9]+/
+		const aMatches = a.match(regex)
+		const bMatches = b.match(regex)
+		const aInt = aMatches.length == 1 ? parseInt(aMatches[0], 10)
+			: Number.MAX_SAFE_INTEGER
+		const bInt = bMatches.length == 1 ? parseInt(bMatches[0], 10)
+			: Number.MAX_SAFE_INTEGER
+
+		return aInt - bInt
+	}).slice(start, end)
+
+	for (const item of itemsData) {
+		const itemPath = path.join(itemsDir, item)
+		const meta = getItemMeta(itemPath)
+		items.push({
+			title: meta.title,
+			summary: meta.summary,
+			url: itemsDir + '/' +  item.split('.')[0]
 		})
-	})
+	}
+
+	return items
+}
+
+exports.getArticles = (start, end) => {
+	return getItems(exports.ARTICLES_DIR, start, end)
+}
+
+exports.getIdeas = (start, end) => {
+	return getItems(exports.IDEAS_DIR, start, end)
 }
 
 exports.sendArticle = (filePath, res) => {
