@@ -1,7 +1,19 @@
 body {
+	background: #282829;
+	color: #cecece;
 	font-family: 'Ubuntu', sans-serif;
 	margin: 0;
 	padding: 0;
+}
+
+a {
+	color: #cecece;
+	text-decoration: none;
+}
+
+.article-title {
+	font-size: 1.5em;
+	margin-top: 1em;
 }
 
 .centered {
@@ -15,25 +27,19 @@ body {
 
 .main-content {
 	font-size: 1.2em;
-	padding-left: 5%;
-	padding-right: 5%;
+	padding-left: 10%;
+	padding-right: 10%;
+	min-width: 500px;
 }
 
 #menu {
-	background-color: #333;
-	left: 0;
-	overflow-x: hidden;
-	position: sticky;
-	top: 0;
+	margin-top: 1em;
 	width: 100%;
 }
 
 #menu a{
-	color: #f2f2f2;
-	float: left;
 	padding: 1em 1.2em;
 	text-align: center;
-	text-decoration: none;
 }
 
 #menu a:hover {

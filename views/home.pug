@@ -1,14 +1,11 @@
 html
 	head
-		title Savage Snipe
 		include common-header.pug
 	body
 		include menu.pug
 		div(class='centered main-content')
-			h1 Homepage
-			p Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque malesuada tincidunt suscipit. Etiam lobortis interdum turpis, quis pharetra felis pulvinar id. Integer scelerisque facilisis quam, et faucibus nulla viverra eget. Phasellus eu mi metus. Proin sit amet erat at ex sagittis molestie mollis sed lorem. Suspendisse potenti. Sed id interdum purus. Fusce posuere lorem in efficitur maximus. Mauris tempor mauris gravida varius dictum. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Nunc tincidunt a ex id semper. Mauris vestibulum et augue et lobortis. Vivamus id vulputate ante, eu volutpat tellus. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae;
-			p Fusce vehicula elit auctor, ullamcorper tellus ut, molestie ex. Etiam a sapien a elit pellentesque consequat et quis elit. In fermentum non eros sit amet dignissim. Nulla a nibh vulputate, commodo metus eu, malesuada neque. Sed interdum tortor nec nisi sollicitudin ultricies. Nullam in diam porttitor, rutrum orci vitae, mattis risus. Nunc nec ligula sem.
-			p Duis eu eros tincidunt, lacinia augue et, ultrices lectus. Morbi rhoncus feugiat ante, in dapibus orci vehicula a. Aliquam varius mattis gravida. Etiam dictum vestibulum tortor eu pellentesque. Donec eu accumsan nunc. Etiam facilisis, eros tristique posuere gravida, risus nisl vulputate tortor, in mollis felis leo eu metus. Duis feugiat lacus sit amet nunc suscipit facilisis. Praesent sagittis et massa vel feugiat. Sed lacinia pharetra aliquet. Vestibulum auctor, sapien in convallis imperdiet, sapien dolor lobortis ante, a dignissim augue quam nec augue. Vivamus sagittis tortor scelerisque sem placerat, vel porta eros mattis. Donec ac erat nec leo dictum vulputate elementum in ligula. Donec vel quam id nisi finibus sodales. Aenean convallis iaculis nunc, id ullamcorper turpis facilisis ut. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Duis maximus feugiat interdum.
-			p Nam pellentesque sem a arcu suscipit lobortis. Cras sollicitudin posuere arcu, eget tincidunt risus. Maecenas molestie commodo ex, sit amet ultricies purus consequat a. Nam a mi mi. Vivamus luctus feugiat volutpat. Phasellus ultrices sit amet lorem non placerat. Mauris suscipit est non diam porta, vel egestas nisl ornare. Phasellus ac facilisis nibh. Fusce metus nunc, varius et arcu eu, pharetra congue risus. Cras quam lorem, lobortis et dapibus eget, rutrum sed risus. Aliquam eu ultrices enim, non euismod nisl. Nam facilisis velit non erat ullamcorper, a malesuada mi commodo. Suspendisse pretium odio est, sed elementum turpis placerat eget. Suspendisse ultricies efficitur enim at semper. Suspendisse orci mauris, dapibus id magna a, scelerisque suscipit justo. Praesent suscipit accumsan facilisis.
-			p Cras ac ante lacus. Pellentesque fringilla orci purus, consectetur ultricies metus interdum eget. Quisque vel tincidunt nulla. Curabitur sit amet pellentesque quam, a porta sem. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Aliquam erat volutpat. Suspendisse vel accumsan risus. Donec congue lorem sit amet est posuere scelerisque. Aenean mattis dui commodo nisl viverra pretium. Vivamus ac nisi ac felis luctus pellentesque quis sit amet nisl. Sed scelerisque ipsum ut arcu rhoncus rutrum. 
-			include footer.pug
+			div(id='article-list')
+				each meta in metas
+					a(href=meta.url)
+						div(class='article-title')= meta.title
+						p= meta.summary
