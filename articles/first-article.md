@@ -1,5 +1,4 @@
 # This is my first article!
-20181123
 
 This is written in [Markdown](https://daringfireball.net/projects/markdown/) but does it show up as Markdown?! I'd hope not (if it does, please let me know because it's not supposed to be).
 

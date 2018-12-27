@@ -1,5 +1,4 @@
-# Cookbook Collective
-20181124
+# Collective Cookbook
 
 * Federated hosts have registered users
 * Recipe has author field

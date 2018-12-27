@@ -13,9 +13,9 @@ router.get('/', (req, res) => {
 	}))
 })
 
-router.get('/:idea', (req, res) => {
-	const filePath = './ideas/' + req.params.idea + '.md'
-	common.sendArticle(filePath, res)
+router.get('/:id', (req, res) => {
+	const id = req.params.id
+	common.handleItemRequestFor(common.IDEAS_DIR, id, res)
 })
 
 module.exports = router
