@@ -4,9 +4,13 @@ const pug = require('pug')
 const router = express.Router()
 
 const allIdeas = common.getIdeas(0)
+const pageSummary = 'A collection of random, incomplete ideas'
 
 router.get('/', (req, res) => {
-	res.send(pug.renderFile('./views/articleList.pug', {metas: allIdeas}))
+	res.send(pug.renderFile('./views/itemList.pug', {
+		metas: allIdeas,
+		summary: pageSummary,
+	}))
 })
 
 router.get('/:idea', (req, res) => {

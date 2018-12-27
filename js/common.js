@@ -2,15 +2,13 @@ const fs = require('fs')
 const path = require('path')
 const pug = require('pug')
 
-const SUMMARY_WORDS = 100
 exports.ARTICLES_DIR = 'articles'
 exports.IDEAS_DIR = 'ideas'
 
-function getItemMeta(filePath) {
+function getItemTitle(filePath) {
 	const data = fs.readFileSync(filePath, 'utf-8').split('\n')
 	const itemTitle = data[0].match(/[^#].*/)[0].trim()
-	const itemSummary = data.slice(1).join(' ').match(/\b.+?\b/g).slice(0, SUMMARY_WORDS).join('') + '...'
-	return {title: itemTitle, summary: itemSummary}
+	return itemTitle
 }
 
 function getItems (itemsDir, start, end) {
@@ -30,10 +28,9 @@ function getItems (itemsDir, start, end) {
 
 	for (const item of itemsData) {
 		const itemPath = path.join(itemsDir, item)
-		const meta = getItemMeta(itemPath)
+		const itemTitle = getItemTitle(itemPath)
 		items.push({
-			title: meta.title,
-			summary: meta.summary,
+			title: itemTitle,
 			url: itemsDir + '/' +  item.split('.')[0]
 		})
 	}
