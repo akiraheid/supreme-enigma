@@ -1,12 +1,10 @@
 const common = require('../js/common')
 const express = require('express')
-const path = require('path')
 const router = express.Router()
 
-router.get('/:articleNum', (req, res) => {
-	const articleNum = req.params.articleNum
-	const filePath = path.join(common.ARTICLES_DIR, articleNum + '.md')
-	common.sendArticle(filePath, res)
+router.get('/:id', (req, res) => {
+	const id = req.params.id
+	common.handleItemRequestFor(common.ARTICLES_DIR, id, res)
 })
 
 module.exports = router

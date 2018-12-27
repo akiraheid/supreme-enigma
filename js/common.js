@@ -38,6 +38,25 @@ function getItems (itemsDir, start, end) {
 	return items
 }
 
+function publishItem404(res) {
+	const msg = 'Sorry, I haven\'t published that :('
+	res.status(404)
+		.send(pug.renderFile('./views/error.pug', {msg: msg}))
+}
+
+function sendItem(filePath, res) {
+	fs.access(filePath, (err) => {
+		if (err) {
+			publishItem404(res)
+			return
+		}
+		fs.readFile('./views/article.pug', 'utf-8', (err, data) => {
+			const renderString = data.replace(/ARTICLE_FILE/, filePath)
+			res.send(pug.render(renderString, {filename: './views/file'}))
+		})
+	})
+}
+
 exports.getArticles = (start, end) => {
 	return getItems(exports.ARTICLES_DIR, start, end)
 }
@@ -46,17 +65,13 @@ exports.getIdeas = (start, end) => {
 	return getItems(exports.IDEAS_DIR, start, end)
 }
 
-exports.sendArticle = (filePath, res) => {
-	fs.access(filePath, (err) => {
-		if (err) {
-			const msg = 'Sorry, I haven\'t published that article :('
-			res.status(404)
-				.send(pug.renderFile('./views/error.pug', {msg: msg}))
-			return
-		}
-		fs.readFile('./views/article.pug', 'utf-8', (err, data) => {
-			const renderString = data.replace(/ARTICLE_FILE/, filePath)
-			res.send(pug.render(renderString, {filename: './views/file'}))
-		})
-	})
+exports.handleItemRequestFor = (itemDir, id, res) => {
+	// Reject IDs that aren't alpha numeric
+	if (id.match(/[^A-Za-z0-9-]/)) {
+		publishItem404(res)
+		return
+	}
+
+	const filePath = path.join(itemDir, id + '.md')
+	sendItem(filePath, res)
 }
