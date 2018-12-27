@@ -1,3 +1,5 @@
+/* Tags */
+
 body {
 	background: #282829;
 	color: #cecece;
@@ -11,8 +13,14 @@ a {
 	text-decoration: none;
 }
 
+a:hover {
+	text-decoration: underline;
+}
+
+/* Classes */
+
 .article-title {
-	font-size: 1.5em;
+	font-size: 1.2em;
 	margin-top: 1em;
 }
 
@@ -32,27 +40,31 @@ a {
 	min-width: 500px;
 }
 
+.page-summary {
+	font-style: italic;
+}
+
+/* IDs */
+
 #menu {
+	border-bottom: solid 1px;
+	display: table;
+	margin-bottom: 1em;
 	margin-top: 1em;
-	width: 100%;
+	padding-bottom: 0.5em;
 }
 
 #menu a{
-	padding: 1em 1.2em;
+	margin: 1em 1.2em;
 	text-align: center;
 }
 
-#menu a:hover {
-	background-color: #ddd;
-	color: black;
-}
-
 #footer {
+	border-top: solid 1px;
 	display: table;
-	border-top: solid;
+	margin-bottom: 1em;
 	margin-top: 1em;
 	padding-top: 0.5em;
-	margin-bottom: 1em;
 }
 
 #footer a {
