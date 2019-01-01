@@ -9,7 +9,7 @@ body {
 }
 
 a {
-	color: #cecece;
+	color: #02c2ed;
 	text-decoration: none;
 }
 
@@ -19,7 +19,7 @@ a:hover {
 
 /* Classes */
 
-.article-title {
+.item-list-item {
 	font-size: 1.2em;
 	margin-top: 1em;
 }
@@ -55,6 +55,7 @@ a:hover {
 }
 
 #menu a{
+	color: #cecece;
 	margin: 1em 1.2em;
 	text-align: center;
 }

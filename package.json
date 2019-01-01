@@ -20,7 +20,8 @@
   "dependencies": {
     "express": "^4.16.4",
     "jstransformer-markdown-it": "^2.1.0",
-    "pug": "^2.0.3"
+    "pug": "^2.0.3",
+    "simple-git": "^1.107.0"
   },
   "devDependencies": {
     "eslint": "^5.9.0"
