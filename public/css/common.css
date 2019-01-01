@@ -13,6 +13,20 @@ a {
 	text-decoration: none;
 }
 
+a[href^="http"]:not([class="no-external-icon"]):after {
+	background-image: url("/img/external-link-1.svg");
+	background-repeat: no-repeat;
+	background-size: 1em;
+	content: '';
+	display: inline-block;
+	margin-left: 0.1em;
+	max-height: 1em;
+	max-width: 1em;
+	height: 1em;
+	width: 1em;
+	white-space: pre-line;
+}
+
 a:hover {
 	text-decoration: underline;
 }
@@ -66,10 +80,6 @@ a:hover {
 	margin-bottom: 1em;
 	margin-top: 1em;
 	padding-top: 0.5em;
-}
-
-#footer a {
-	text-decoration: none;
 }
 
 #footer div {
