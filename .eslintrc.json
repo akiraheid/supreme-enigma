@@ -13,6 +13,9 @@
         "indent": ["error", "tab"],
         "linebreak-style": ["error", "unix"],
         "no-mixed-spaces-and-tabs": "error",
+		"no-unused-vars": ["error", {
+			"argsIgnorePattern": "^_"
+		}],
         "no-var": "error",
         "prefer-const": ["error", {
             "destructuring": "any",
