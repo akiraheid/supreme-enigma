@@ -1,0 +1,17 @@
+body {
+	background-color: #000;
+}
+
+a, a:link, a:visited, a:active {
+	border-color: #fff;
+	border-width: 0 0 1px 0;
+	border-style: none none solid none;
+	color: #fff;
+	padding: 0 0 2px 0;
+	text-decoration: none;
+}
+
+a.no-underline {
+	border-width: 0 0 0 0;
+	text-decoration: none;
+}

@@ -1,35 +1,12 @@
 {
-	"name": "supreme-enigma",
-	"version": "0.0.1",
-	"description": "Framework for my personal website.",
-	"main": "app.js",
-	"scripts": {
-		"start": "node app.js",
-		"lint": "node ./node_modules/eslint/bin/eslint.js . && echo \"No linting issues\"",
-		"test": "npm run test-units && npm run test-ui",
-		"test-units": "tap tests/unit/*.js",
-		"test-ui": "node tests/ui/runner.js"
-	},
-	"repository": {
-		"type": "git",
-		"url": "git+https://github.com/akiraheid/supreme-enigma.git"
-	},
-	"author": "",
-	"license": "MIT",
-	"bugs": {
-		"url": "https://github.com/akiraheid/supreme-enigma/issues"
-	},
-	"homepage": "https://github.com/akiraheid/supreme-enigma#readme",
-	"dependencies": {
-		"express": "^4.16.4",
-		"jstransformer-markdown-it": "^2.1.0",
-		"pug": "^2.0.3",
-		"simple-git": "^1.107.0"
-	},
-	"devDependencies": {
-		"eslint": "^6.4.0",
-		"svgo": "^1.1.1",
-		"tap": "^12.1.1",
-		"testcafe": "^0.23.3"
-	}
+  "name": "supreme-enigma",
+  "private": true,
+  "dependencies": {
+    "metalsmith": "^2.1.0",
+    "metalsmith-collections": "^0.9.0",
+    "metalsmith-layouts": "^1.4.1",
+    "metalsmith-markdown": "^0.2.1",
+    "metalsmith-permalinks": "^0.5.0",
+    "pug": "^2.0.4"
+  }
 }
