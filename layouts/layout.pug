@@ -1,0 +1,21 @@
+doctype html
+html(lang='en')
+	head
+		title #{title}
+		meta(charset='utf-8')
+		meta(
+			name='viewport'
+			content='width=device-width, initial-scale=1, shrink-to-fit=no')
+
+		block scripts
+			include ./parts/resources
+
+	body.text-white
+		.container
+			block header
+				include ./parts/header
+
+			.row.justify-content-center: .col-10.col-lg-8
+				block content
+
+			block footer

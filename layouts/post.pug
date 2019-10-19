@@ -1,0 +1,6 @@
+extends layout.pug
+
+block content
+	.row: .col-auto: h2 #{title}
+	.row: p.col= date.toDateString()
+	.row: .col!= contents
