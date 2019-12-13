@@ -1,15 +1,19 @@
+const fs = require('fs')
+
 const Metalsmith = require('metalsmith')
 const collections = require('metalsmith-collections')
 const layouts = require('metalsmith-layouts')
 const markdown = require('metalsmith-markdown')
 const permalinks = require('metalsmith-permalinks')
 
+const dest = './build'
+
 Metalsmith(__dirname)
 	.metadata({
 		title: '',
 	})
 	.source('./src')
-	.destination('./build')
+	.destination(dest)
 	.clean(true)
 	.use(collections({
 		posts: {
@@ -71,4 +75,8 @@ Metalsmith(__dirname)
 	}))
 	.build(function(err, _) {
 		if (err) { throw err }
+
+		fs.copyFileSync(
+			'./node_modules/bootstrap/dist/css/bootstrap.min.css',
+			`${dest}/css/bootstrap.min.css`)
 	})

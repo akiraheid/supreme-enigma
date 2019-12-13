@@ -6,7 +6,7 @@ build: node_modules
 clean:
 	-rm -r build ${pack}
 
-deploy: build package upload
+deploy: clean build package upload
 
 node_modules: package.json
 	npm install
@@ -14,7 +14,7 @@ node_modules: package.json
 package: build
 	cd build && tar -czf ../${pack} .
 
-serve: build
+serve: clean build
 	cd build && python3 -m http.server
 
 upload: package
