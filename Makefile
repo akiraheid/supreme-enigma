@@ -1,11 +1,24 @@
+pack ::= "public.tgz"
 
 build: node_modules
 	node app.js
 
+clean:
+	-rm -r build ${pack}
+
+deploy: build package upload
+
 node_modules: package.json
 	npm install
 
-serve: build
-	cd build && python -m http.server
+package: build
+	cd build && tar -czf ../${pack} .
 
-.PHONY: build
+serve: build
+	cd build && python3 -m http.server
+
+upload: package
+	scp ${pack} www:~/prod
+	ssh www "cd ~/prod && rm -r * && tar -xzf ${pack} && rm ${pack}"
+
+.PHONY: clean deploy package serve upload
