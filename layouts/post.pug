@@ -1,11 +1,11 @@
 extends layout.pug
 
 block content
-	.row: .col-auto: h1 #{title}
+	.row.justify-content-center: .col-auto: h1 #{title}
 	-
 		var dateStr = date.toLocaleString(undefined, {
 			timeZone: 'UTC', year: 'numeric', month: 'long', day: 'numeric'
 		})
 
-	.row: p.col= dateStr
+	.row.justify-content-center: .col-auto.mb-3= dateStr
 	#content.row: .col!= contents

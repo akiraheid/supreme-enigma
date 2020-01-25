@@ -1,7 +1,7 @@
 pack ::= "public.tgz"
 
 build: node_modules
-	time node app.js
+	node app.js
 
 clean:
 	-rm -r build ${pack}

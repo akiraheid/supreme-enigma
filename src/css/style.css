@@ -27,3 +27,7 @@ a.no-underline {
 #content h3 {
 	font-size: 1.2em;
 }
+
+hr {
+	border-top: 1px solid #fff;
+}
