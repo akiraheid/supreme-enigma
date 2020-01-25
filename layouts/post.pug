@@ -1,6 +1,11 @@
 extends layout.pug
 
 block content
-	.row: .col-auto: h2 #{title}
-	.row: p.col= date.toDateString()
-	.row: .col!= contents
+	.row: .col-auto: h1 #{title}
+	-
+		var dateStr = date.toLocaleString(undefined, {
+			timeZone: 'UTC', year: 'numeric', month: 'long', day: 'numeric'
+		})
+
+	.row: p.col= dateStr
+	#content.row: .col!= contents
