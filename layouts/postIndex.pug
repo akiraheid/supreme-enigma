@@ -3,8 +3,14 @@ extends layout.pug
 block content
 	.row.justify-content-center: .col-auto: h1 Posts
 
-	each post in collectionKeys.posts
+	each post in indexData
 		if post.path !== 'posts'
-			.row.align-items-center
-				small.col-2= post.date.toDateString()
-				h2.col: a(href='/'+post.path) #{post.title}
+			-
+				var dateStr = post.date.toLocaleString(undefined, {
+					timeZone: 'UTC', year: 'numeric', month: 'long',
+					day: 'numeric'
+				})
+
+			.row.mb-2.align-items-center
+				small.col-2= dateStr
+				h3.col: a(href='/'+post.path) #{post.title}

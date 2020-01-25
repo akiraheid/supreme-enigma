@@ -15,3 +15,15 @@ a.no-underline {
 	border-width: 0 0 0 0;
 	text-decoration: none;
 }
+
+#content h1 {
+	font-size: 1.7em;
+}
+
+#content h2 {
+	font-size: 1.5em;
+}
+
+#content h3 {
+	font-size: 1.2em;
+}

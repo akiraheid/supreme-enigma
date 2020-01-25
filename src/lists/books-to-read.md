@@ -13,7 +13,7 @@ title: Books to read
 * About face: the essentials of interaction design - Alan Cooper
 * Don't make me think - Steve Krug
 * The annotated Turing: A guided tour through Alan Turing's historic paper on computability and the Turing Machine - Charles Petzold
-	* "Uncle Bob" recommends the book in his talks, and I enjoy his point of view, so I'd like to see if I glean some of wha the did.
+	* "Uncle Bob" recommends the book in his talks, and I enjoy his point of view, so I'd like to see if I glean some of what he did.
 * Ideas and opinions - Albert Einstein
 	* A collection of ideas and opinions by a great man
 * Wheel of time series - Robert Jordan

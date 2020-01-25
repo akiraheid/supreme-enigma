@@ -8,6 +8,80 @@ const permalinks = require('metalsmith-permalinks')
 
 const dest = './build'
 
+// Aggregate all files in a collection and store them in an array in the index
+// file.
+const createIndexFiles = (files) => {
+	// Metadata options for index pages.
+	// {
+	//   'indexPath': {
+	//   }
+	// }
+	// Where
+	// key  The path of the index page. E.g. 'posts' or 'pages/lists'
+	// collections  The collections to aggregate for this index
+	// keys  The keys from a Metalsmith file Object to store. E.g. 'title' or
+	//       'date'
+	// sortBy  The method of sorting files in the aggregated data
+	const indices = {
+		'lists': {
+			collections: ['lists'],
+			keys: ['title', 'path'],
+			sortBy: (a, b) => a.title < b.title,
+		},
+		'posts': {
+			collections: ['posts'],
+			keys: ['title', 'path', 'date'],
+			sortBy: (a, b) => a.date < b.date,
+		},
+	}
+
+	// Map of collections to file keys in the collections.
+	// { 'posts': ['posts/1', 'posts/2'] }
+	const map = {}
+
+	// For each Metalsmith file, add the file to the associated collection in
+	// the collections map
+	for (const key in files) {
+		const collections = files[key].collection
+		collections.forEach((collection) => {
+			if (!map[collection]) { map[collection] = [key] }
+			else { map[collection].push(key) }
+		})
+	}
+
+	// For each index, get the metadata from Metalsmith files in collections of
+	// interest for the index
+	for (const index in indices) {
+		const indexKey = `${index}/index.html`
+		const data = []
+
+		// For each collection of interest for the index, get the specified
+		// Metalsmith file metadata
+		const collections = indices[index].collections
+		collections.forEach((collection) => {
+
+			// For each Metalsmith file key, get the metadata of interest
+			const fileKeys = map[collection]
+			fileKeys.forEach((fileKey) => {
+				const metadataKeys = indices[index].keys
+				const metadata = {}
+				metadataKeys.forEach((metadataKey) => {
+					metadata[metadataKey] = files[fileKey][metadataKey]
+				})
+				data.push(metadata)
+			})
+		})
+
+		// Sort the collected metadata
+		const sortBy = indices[index].sortBy
+		data.sort(sortBy)
+
+		files[indexKey].indexData = data
+	}
+
+	return files
+}
+
 Metalsmith(__dirname)
 	.metadata({
 		title: '',
@@ -16,6 +90,10 @@ Metalsmith(__dirname)
 	.destination(dest)
 	.clean(true)
 	.use(collections({
+		lists: {
+			pattern: 'lists/*.md',
+			refer: false,
+		},
 		posts: {
 			pattern: 'posts/*.md',
 			refer: false,
@@ -27,49 +105,7 @@ Metalsmith(__dirname)
 	}))
 	.use(markdown())
 	.use(permalinks())
-	.use((files) => {
-		// Grab all items in a collection and add to list for a collection index
-		const options = {
-			path: 'posts',
-			collections: ['posts'],
-			keys: ['title', 'path', 'date'],
-			limit: undefined,
-			sortBy: (a, b) => a.date < b.date,
-		}
-
-		let indexKey = undefined
-		const data = []
-		for (const key in files) {
-			// Search through all files via key and record file metadata
-			// when the file is found to match collection defined in options.
-			// If path is found in the meanwhile, record key to set data in
-			// later.
-			if (files[key].path === options.path) {
-				indexKey = key
-			} else if (files[key].collection.some((collection) =>
-				options.collections.includes(collection))) {
-				const meta = {}
-
-				// Store metadata specified in options
-				for (const optKey of options.keys) {
-					meta[optKey] = files[key][optKey]
-				}
-				data.push(meta)
-			}
-		}
-
-		if (indexKey) {
-			if (files[indexKey].collectionKeys === undefined) {
-				files[indexKey].collectionKeys = {}
-			}
-
-			// Sort based on option sort function
-			data.sort(options.sortBy)
-			files[indexKey].collectionKeys[options.path] = data
-		}
-
-		return files
-	})
+	.use(createIndexFiles)
 	.use(layouts({
 		engine: 'pug'
 	}))
