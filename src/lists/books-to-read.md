@@ -164,3 +164,9 @@ _The Power Tactics of Jesus Christ and Other Essays_ - Jay Haley
 "The title essay in this book is peerless and amazing. The rest of the essays, which talk about Haley’s unusual approach to psychotherapy are also quite good. If you’ve gone to therapy, are thinking about going to therapy, or know someone going to therapy, this book is a must-read." - [Ryan Holiday](https://thoughtcatalog.com/ryan-holiday/2013/07/24-books-youve-probably-never-heard-of-but-will-change-your-life/)
 
 I'm under none of those categories, but I enjoy reading about psychology.
+
+---
+
+_Kitchen Confidential_ - Anthony Bourdain
+
+"It shows the raw bits of what it's like to work in the kitchen." - Chris
