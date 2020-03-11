@@ -170,3 +170,93 @@ I'm under none of those categories, but I enjoy reading about psychology.
 _Kitchen Confidential_ - Anthony Bourdain
 
 "It shows the raw bits of what it's like to work in the kitchen." - Chris
+
+I like food, and I like learning about unique experiences like Bourdain's.
+
+---
+
+_Designing Data-Intensive Applications: The Big Ideas Behind Reliable, Scalable, and Maintainable Systems_ - Martin Kleppmann
+
+"This book is dense.
+It’s packed with foundational material and it manages to combine a first-principles approach with a focus on the impact of those decisions on the engineering choices behind real-world large-scale distributed systems.
+I do go back to it from time to time, to re-read a chapter, re-study a set of concepts.
+I just love it." - [Luca Palmieri](https://www.lpalmieri.com/posts/2020-03-08-on-the-shoulders-of-the-giants/)
+
+I do plan on building such a system someday. Best learn what experts have to say now.
+
+---
+
+_Cloud Native Patterns: Designing change-tolerant software_ - Cornelia Davis
+
+"I never believed the digital native narrative, but it’s indeed true that as a software engineer I am Cloud native. All the systems I have been working with have always been designed, hosted and operated in the Cloud since day 0.
+Cornelia Davis did a very good job at putting together a primer on the patterns and techniques that you should have in your toolbox when designing increasingly-complex Cloud native applications.
+I recommend it often as a first read on real-world distributed systems." - [Luca Palmieri](https://www.lpalmieri.com/posts/2020-03-08-on-the-shoulders-of-the-giants/)
+
+Eventually, everything will become part of the cloud -- whether it be on massive data servers across the world or all phones being a shared resource because there are access controls for each user. Whatever it is, the earlier I can get ahead of the coming wave, the better off I'll probably be.
+
+---
+
+_Domain-Driven Design: Tackling Complexity in the Heart of Software_ - Eric Evans
+
+"The book on DDD, also known as The Big Blue Book.
+It’s long but it covers an insane amount of material: if you are in the business of writing enterprise software, it’s a must-read.
+Translating the rules and the mental model of a complex business domain into sofware is indeed the core of the challenge when writing enterprise software.
+The techniques and the terminology introduced by Evans will pay dividends as the complexity of the domain you are tackling and the organisation you are working in increases. Different people have suggested me a shorter introduction to the subject, Domain-Driven Design Distilled by Vaughn Vernon, but I haven’t read it first hand." - [Luca Palmieri](https://www.lpalmieri.com/posts/2020-03-08-on-the-shoulders-of-the-giants/)
+
+Write software for what it's going to be used for. Got it.
+
+---
+
+_Domain Modeling Made Functional_ - Scott Wlaschin
+
+"I discovered this book looking up the author from a talk of his - I loved the talk and I loved the book.
+It’s on its own a good introduction to DDD as well as to the broader topic of type-driven development.
+
+In a nutshell, we can leverage the type system to represent the constraints of our domain, making incorrect state difficult or impossible to represent.
+
+The book presents the idea in the context of functional programming, but it’s indeed viable even with non-strictly-functional programming languages as long as they have a rich typesystem (e.g. Rust).
+If you find the idea interesting, the author’s website is a gold mine.
+If you want a blog-sized introduction to the topic, check Parse, don’t validate by Alexis King." - [Luca Palmieri](https://www.lpalmieri.com/posts/2020-03-08-on-the-shoulders-of-the-giants/)
+
+I like the idea of type-driven development. Having worked with JS, python, and C++, I much rather prefer the strictness of C++ to prevent errors rather than depending on double-checks _I_ write to make sure the data I'm handling is safe. Sure, duck/dynamic typing is convenient for simple systems, but not at the cost of free testing done by the compiler for larger, more intricate systems.
+
+---
+
+_Test Driven Development: by Example_ - Kent Beck
+
+"There is a general appreciation in our industry around Test Driven Development. Nonetheless, I haven’t met many practioners who actually run it by the book, for all sorts of reasons.
+Before taking a stance on the matter I wanted to see it done religiously. Short on neighbours, I turned to the author himself: Kent Beck is the creator of XP (Xtreme Programming), one the main voices of TDD as well as one of the authours of the Agile manifesto.
+The book is nothing more nothing less than a long pair programming session with him, as he works his way using TDD through a problem (i.e. writing a testing framework - there is a meta element at play here).
+You are an observer - as a reader you don’t get to play ping-pong with him; yet, it’s worth reading to actually see what TDD looks and feels like." - [Luca Palmieri](https://www.lpalmieri.com/posts/2020-03-08-on-the-shoulders-of-the-giants/)
+
+Let's see what TDD is all about.
+
+---
+
+_Working Effectively with Legacy Code_ - Michael Feathers
+
+"I have come to appreciate that software is more often read than written. As it often goes, the author has generally moved on (either in another area of the business or somewhere else entirely). Yet the system keeps running in production, hopefully producing value, and it needs to be maintained.
+
+As it happens, not all of its behaviour is covered by automated tests - it’s legacy code. And most engineers will spend most of their careers working on such code (that includes code they wrote themselves six or twelve months earlier). I spent a fair share of my short software career doing so already.
+
+Feathers put together a series of useful techniques to tame the beast - documenting existing behaviour using tests in order to make it possible to evolve the system itself to satisfy new requirements.
+Extremely useful as a reference when working on gnarly legacy beasts." - [Luca Palmieri](https://www.lpalmieri.com/posts/2020-03-08-on-the-shoulders-of-the-giants/)
+
+I'll be creating legacy code at some point for someone. Hopefully this makes it easier to maintain for whoever ends up taking it over.
+
+---
+
+_Continuous Delivery: Reliable Software Releases through Build, Test, and Deployment Automation_ - Jez Humble and David Farley
+
+"A deep-dive into the world of CD, Continuous Delivery.
+The book is 10 years old, but it has withstood the test of time: technologies might have changed, but the principles and the challenges highlighted here are still relevant when designing (and automating) the release pipelines of contemporary systems." - [Luca Palmieri](https://www.lpalmieri.com/posts/2020-03-08-on-the-shoulders-of-the-giants/)
+
+I have a pretty good idea from reading around online, but I can always learn more.
+
+---
+
+_Turn The Ship Around!: A True Story of Building Leaders by Breaking the Rules_ - L. David Marquet
+
+"Turn The Ship Around!, in particular, is a written account of the wonders of decentralised decision-making and high mutual-trust in an environment used to a strict Command/Control management-style (the US Navy!)." - [Luca Palmieri](https://www.lpalmieri.com/posts/2020-03-08-on-the-shoulders-of-the-giants/)
+
+Soft skills are something I want to learn a lot more about, especially if it decentralizes the work.
