@@ -17,15 +17,23 @@ a.no-underline {
 }
 
 #content h1 {
-	font-size: 1.7em;
+	font-size: 1.7rem;
 }
 
 #content h2 {
-	font-size: 1.5em;
+	font-size: 1.5rem;
 }
 
 #content h3 {
-	font-size: 1.2em;
+	font-size: 1.2rem;
+}
+
+blockquote {
+	margin: 0 1rem 1rem; 
+}
+
+pre {
+	color: #fff;
 }
 
 hr {
