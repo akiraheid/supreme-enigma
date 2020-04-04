@@ -14,6 +14,9 @@ const createIndexFiles = (files) => {
 	// Metadata options for index pages.
 	// {
 	//   'indexPath': {
+	//     collections: [],
+	//     keys: [],
+	//     sortBy: function
 	//   }
 	// }
 	// Where
@@ -26,7 +29,12 @@ const createIndexFiles = (files) => {
 		'lists': {
 			collections: ['lists'],
 			keys: ['title', 'path'],
-			sortBy: (a, b) => a.title < b.title,
+			sortBy: (a, b) => a.title > b.title,
+		},
+		'notes': {
+			collections: ['notes'],
+			keys: ['title', 'path'],
+			sortBy: (a, b) => a.title > b.title,
 		},
 		'posts': {
 			collections: ['posts'],
@@ -92,6 +100,10 @@ Metalsmith(__dirname)
 	.use(collections({
 		lists: {
 			pattern: 'lists/*.md',
+			refer: false,
+		},
+		notes: {
+			pattern: 'notes/*.md',
 			refer: false,
 		},
 		posts: {
