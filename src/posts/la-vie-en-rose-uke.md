@@ -14,8 +14,8 @@ I've put the French and English lyrics side-by-side to make it easier to referen
 	Quand il me prend dans ses bras
 	(Hold me close and hold me fast)
 
-	                      F
-	Il  me  parle  tout   bas
+	                     F
+	Qu'il me parle tout  bas
 	(The magic spell you cast)
 
 	                   Gm    C7
