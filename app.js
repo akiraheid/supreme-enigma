@@ -39,7 +39,11 @@ const createIndexFiles = (files) => {
 		'posts': {
 			collections: ['posts'],
 			keys: ['title', 'path', 'date'],
-			sortBy: (a, b) => a.date < b.date,
+			sortBy: (a, b) => { // Date latest to oldest
+				if (a.date === undefined) { return true }
+				else if (b.date === undefined) { return false }
+				return a.date < b.date
+			},
 		},
 	}
 
