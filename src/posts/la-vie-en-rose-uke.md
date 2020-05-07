@@ -6,8 +6,8 @@ title: La Vie en rose (ukulele)
 
 I've put the French and English lyrics side-by-side to make it easier to reference where the chords change.
 
-	 F     Am    Gm    C7    F7    A#
-	2010  2000  0231  0001  2311  3211
+	 F     Am    Gm    C7    C     F7    A#
+	2010  2000  0231  0001  0003  2313  3211
 
 
 	F                          Am
@@ -31,7 +31,7 @@ I've put the French and English lyrics side-by-side to make it easier to referen
 	Des mots de tous  les  jours
 	(And though I close my eyes)
 
-	                      F      C7
+	                      Gm     C7
 	Et ça me fait quelque chos - e
 	(I  see  la  vie  en  ros -  e)
 
