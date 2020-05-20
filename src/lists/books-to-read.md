@@ -260,3 +260,13 @@ _Turn The Ship Around!: A True Story of Building Leaders by Breaking the Rules_ 
 "Turn The Ship Around!, in particular, is a written account of the wonders of decentralised decision-making and high mutual-trust in an environment used to a strict Command/Control management-style (the US Navy!)." - [Luca Palmieri](https://www.lpalmieri.com/posts/2020-03-08-on-the-shoulders-of-the-giants/)
 
 Soft skills are something I want to learn a lot more about, especially if it decentralizes the work.
+
+---
+
+_High Noon on the Electronic Frontier: Conceptual Issues in Cyberspace. Introduction_
+
+_Cyber Rights: Defending Free speech in the Digital Age_
+
+_The Splinters of our Discontent: How to Fix Social Media and Democracy Without Breaking Them_
+
+All by Michael Godwin, who seems like a cool dude and seems to be well-versed in this space.
