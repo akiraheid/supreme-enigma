@@ -263,10 +263,77 @@ Soft skills are something I want to learn a lot more about, especially if it dec
 
 ---
 
-_High Noon on the Electronic Frontier: Conceptual Issues in Cyberspace. Introduction_
-
-_Cyber Rights: Defending Free speech in the Digital Age_
-
-_The Splinters of our Discontent: How to Fix Social Media and Democracy Without Breaking Them_
+* _High Noon on the Electronic Frontier: Conceptual Issues in Cyberspace. Introduction_
+* _Cyber Rights: Defending Free speech in the Digital Age_
+* _The Splinters of our Discontent: How to Fix Social Media and Democracy Without Breaking Them_
 
 All by Michael Godwin, who seems like a cool dude and seems to be well-versed in this space.
+
+---
+
+* _1984_ - George Orwell
+* _A Better World_ - Marcus Sakey
+* _A Canticle for Leibowitz_ - Walter Mille
+* _A Clockwork Orange_ - Anthony Burgess
+* _After the event_ - T.A Williams
+* _Alongside Night_ - J. Neil Schulman
+* _Annihilation_ - Jeff VanderMeer
+* _Anthem_ - Ayn Rand
+* _Ape and Essence_ - Aldous Huxley
+* _Bend Sinister_ - Vladimir Nabokov
+* _Blindness_ - José Saramago
+* _Cat’s Cradle_ - Kurt Vonnegut
+* _City of Bohane_ - Kevin Barry
+* _Cloud Atlas_ - David Mitchell
+* _Contagious_ - Jacqueline Druga
+* _Facial Justice_ - L. P. Hartley
+* _Fahrenheit 451_ - Ray Bradbury
+* _Flow My Tears, the Policeman Said_ - Philip K. Dick
+* _Gun, with Occasional Music_ - Jonathan Lethem
+* _High-Rise_ - J. G. Ballard
+* _I Am Legend_ - Richard Matheson
+* _It Can’t Happen Here_ - Sinclair Lewis
+* _Jennifer Government_ - Max Barry
+* _Kallocain_ - Karin Boye
+* _Make Room! Make Room!_ - Harry Harrison
+* _The Memoirs of a Survivor_ - Doris Lessing
+* _The Knife of Never Letting Go_ - Patrick Ness
+* _Never Let Me Go_ - Kazuo Ishiguro
+* _The Soft Machine_ - William S. Burroughs
+* _Obernewtyn_ - Isobelle Carmody
+* _One (aka Escape to Nowhere)_ - David Karp
+* _Partials_ - Dan Wells
+* _Pirate Cinema_ - Cory Doctorow
+* _Player Piano_ - Kurt Vonnegut
+* _The Running Man_ - Richard Bachman (aka Stephen King).
+* _The Children of Men_ - P.D. James
+* _The Chrysalids_ - John Wyndham
+* _The Dispossessed_ - Ursula K. Le Guin
+* _The Drowned World_ - J. G. Ballard
+* _The Female Man_ - Joanna Russ
+* _The Flood_ - Maggie Gee
+* _The Giver_ - Lois Lowry
+* _The Handmaid’s Tale_ - Margaret Atwood
+* _Holy Machine_ - Chris Beckett
+* _The Iron Heel_ - Jack London
+* _The Jagged Orbit_ - John Brunner
+* _The Knife of Never Letting Go_ - Patrick Ness
+* _The Lathe of Heaven_ - Ursula K. Le Guin
+* _The Passion of New Eve_ - Angela Carter
+* _The Penultimate Truth_ - Philip K. Dick
+* _The Republic of the Future_ - Anna Bowman Dodd
+* _The Road_ - Cormac McCarthy
+* _The Sleeper Awakes_ - H. G. Wells
+* _The Time Machine_ - H. G. Wells
+* _The Tube Riders_ - Chris Ward
+* _The White Mountains_ - John Christopher
+* _This Perfect Day_ - Ira Levin
+* _Uglies_ - Scott Westerfield
+* _Unwind_ - Neal Shusterman
+* _Walk To the End of the World_ - Suzy McKee Charnas
+* _War with the Newts_ - Karel Čapek
+* _We_ - Yevgeny Zamyatin
+* _Woman on the Edge of Time_ - Marge Piercy
+* _Wool_ - Hugh Howey
+
+I'm in a dystopian mood. Full list from [this site](https://best-sci-fi-books.com/96-dystopian-science-fiction-books/). I've removed books I've already read or am not interested in reading.
