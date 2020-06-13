@@ -4,7 +4,7 @@ block content
 	.row.justify-content-center: .col-auto: h1 Yo
 
 	table.index
-		each post in posts
+		each post in indexData
 			if post.path !== 'posts'
 				-
 					var day = post.date.toLocaleString(undefined, {
