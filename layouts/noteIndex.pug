@@ -4,6 +4,5 @@ block content
 	.row.justify-content-center: .col-auto: h1 Notes
 
 	each note in indexData
-		if note.path !== 'notes'
-			.row.mb-2.align-items-center
-				h3.col: a(href='/'+note.path) #{note.title}
+		.row.mb-2.align-items-center
+			h3.col: a(href='/'+note.path) #{note.title}

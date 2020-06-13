@@ -40,15 +40,15 @@ Metalsmith(__dirname)
 	.clean(true)
 	.use(collections({
 		lists: {
-			pattern: 'lists/*.md',
+			pattern: ['lists/*.md', '!lists/index.md'],
 			refer: false,
 		},
 		notes: {
-			pattern: 'notes/*.md',
+			pattern: ['notes/*.md', '!notes/index.md'],
 			refer: false,
 		},
 		posts: {
-			pattern: 'posts/*.md',
+			pattern: ['posts/*.md', '!posts/index.md'],
 			refer: false,
 			reverse: true,
 			sortBy: 'date',

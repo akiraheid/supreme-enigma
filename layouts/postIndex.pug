@@ -5,18 +5,17 @@ block content
 
 	table.index
 		each post in indexData
-			if post.path !== 'posts'
-				-
-					var day = post.date.toLocaleString(undefined, {
-						timeZone: 'UTC', day: 'numeric'
-					})
-					var month = post.date.toLocaleString(undefined, {
-						timeZone: 'UTC', month: 'numeric'
-					})
-					var year = post.date.toLocaleString(undefined, {
-						timeZone: 'UTC', year: 'numeric'
-					})
+			-
+				var day = post.date.toLocaleString(undefined, {
+					timeZone: 'UTC', day: 'numeric'
+				})
+				var month = post.date.toLocaleString(undefined, {
+					timeZone: 'UTC', month: 'numeric'
+				})
+				var year = post.date.toLocaleString(undefined, {
+					timeZone: 'UTC', year: 'numeric'
+				})
 
-				tr
-					td.text-align-right #{year}/#{month}/#{day}
-					td: a(href='/'+post.path) #{post.title}
+			tr
+				td.text-align-right #{year}/#{month}/#{day}
+				td: a(href='/'+post.path) #{post.title}
