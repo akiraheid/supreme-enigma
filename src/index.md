@@ -1,4 +1,4 @@
 ---
-layout: index.pug
-title: Home
+layout: postIndex.pug
+title: Yo
 ---
