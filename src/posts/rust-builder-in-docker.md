@@ -56,7 +56,7 @@ The only time this layer needs to be rebuilt is when the dependencies change, wh
 
 The modified Dockerfile now takes those steps into account.
 
-```
+```Dockerfile
 FROM rust:1.44 as builder
 
 # Cache dependencies
@@ -92,7 +92,7 @@ whitfin.io suggests using a smaller base image like `rust:jessie-slim` for the r
 
 In order to do this, changing both the build _and_ runtime base images are required so that the necessary files are available/compiled into the app.
 
-```
+```Dockerfile
 FROM rust:1.44-alpine as builder
 
 # Cache dependencies

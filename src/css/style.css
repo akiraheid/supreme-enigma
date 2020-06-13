@@ -32,12 +32,27 @@ blockquote {
 	margin: 0 1rem 1rem; 
 }
 
-pre {
+code {
+	border: 1px solid white;
+	border-radius: 3px;
 	color: #fff;
+	padding: .2rem .4rem;
 }
 
 hr {
 	border-top: 1px solid #fff;
+}
+
+pre {
+	border: 1px solid white;
+	border-radius: 3px;
+	color: #fff;
+	padding: .5rem;
+}
+
+pre code {
+	border: none;
+	padding: 0;
 }
 
 table {
