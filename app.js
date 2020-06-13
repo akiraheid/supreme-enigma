@@ -1,10 +1,13 @@
 const fs = require('fs')
 
+require('dotenv').config()
+
 const Metalsmith = require('metalsmith')
 const collections = require('metalsmith-collections')
 const layouts = require('metalsmith-layouts')
 const markdown = require('metalsmith-markdown')
 const permalinks = require('metalsmith-permalinks')
+const atomfeed = require('metalsmith-feed-atom')
 
 const dest = './build'
 
@@ -31,6 +34,16 @@ function getIndexData(files, keys) {
 	})
 
 	return ret
+}
+
+const siteTitle = process.env.SITE_TITLE
+const siteUrl = process.env.SITE_URL
+
+if (!siteTitle || !siteUrl) {
+	console.log('.env file does not contain the necessary information for '
+		+ 'generating the atom feed. Exiting.')
+
+	process.exit(1)
 }
 
 Metalsmith(__dirname)
@@ -60,6 +73,15 @@ Metalsmith(__dirname)
 	}))
 	.use(markdown({ gfm: true }))
 	.use(permalinks())
+	.use(atomfeed({
+		collection: 'posts',
+		destination: 'atom.xml',
+		limit: 100,
+		metadata: {
+			title: siteTitle,
+			url: siteUrl,
+		},
+	}))
 	.use(createIndexFiles)
 	.use(layouts({
 		engine: 'pug'
