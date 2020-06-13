@@ -4,7 +4,7 @@ block content
 	.row.justify-content-center: .col-auto: h1 Yo
 
 	table.index
-		each post in indexData
+		each post in posts
 			if post.path !== 'posts'
 				-
 					var day = post.date.toLocaleString(undefined, {
@@ -18,5 +18,5 @@ block content
 					})
 
 				tr
-					td.no-border #{year}/#{month}/#{day}
-					td.no-border: a(href='/'+post.path) #{post.title}
+					td.text-align-right #{year}/#{month}/#{day}
+					td: a(href='/'+post.path) #{post.title}

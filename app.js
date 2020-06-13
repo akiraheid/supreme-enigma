@@ -94,15 +94,23 @@ const createIndexFiles = (files) => {
 	return files
 }
 
-function createHomeFile(files) {
-	files['index.html'].indexData = files['posts/index.html'].indexData
+function createHomeFile(files, metalsmith) {
+	console.log(metalsmith.metadata().posts)
+	const posts = []
+	metalsmith.metadata().posts.forEach((post) => {
+		posts.push({
+			date: post.date,
+			path: post.path,
+			title: post.title,
+		})
+	})
+
+	files['index.html'].posts = posts
 	return files
 }
 
 Metalsmith(__dirname)
-	.metadata({
-		title: '',
-	})
+	.metadata({})
 	.source('./src')
 	.destination(dest)
 	.clean(true)
@@ -118,6 +126,8 @@ Metalsmith(__dirname)
 		posts: {
 			pattern: 'posts/*.md',
 			refer: false,
+			reverse: true,
+			sortBy: 'date',
 		},
 		projects: {
 			pattern: 'projects/*.md',

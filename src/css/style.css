@@ -10,6 +10,10 @@
 	font-size: 1.2rem;
 }
 
+.text-align-right {
+	text-align: right;
+}
+
 a, a:link, a:visited, a:active {
 	border-color: #fff;
 	border-width: 0 0 1px 0;
