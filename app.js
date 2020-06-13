@@ -94,6 +94,11 @@ const createIndexFiles = (files) => {
 	return files
 }
 
+function createHomeFile(files) {
+	files['index.html'].indexData = files['posts/index.html'].indexData
+	return files
+}
+
 Metalsmith(__dirname)
 	.metadata({
 		title: '',
@@ -122,6 +127,7 @@ Metalsmith(__dirname)
 	.use(markdown({ gfm: true }))
 	.use(permalinks())
 	.use(createIndexFiles)
+	.use(createHomeFile)
 	.use(layouts({
 		engine: 'pug'
 	}))

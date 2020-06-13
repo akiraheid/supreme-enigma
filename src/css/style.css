@@ -1,5 +1,13 @@
-body {
-	background-color: #000;
+#content h1 {
+	font-size: 1.7rem;
+}
+
+#content h2 {
+	font-size: 1.5rem;
+}
+
+#content h3 {
+	font-size: 1.2rem;
 }
 
 a, a:link, a:visited, a:active {
@@ -16,20 +24,12 @@ a.no-underline {
 	text-decoration: none;
 }
 
-#content h1 {
-	font-size: 1.7rem;
-}
-
-#content h2 {
-	font-size: 1.5rem;
-}
-
-#content h3 {
-	font-size: 1.2rem;
-}
-
 blockquote {
 	margin: 0 1rem 1rem; 
+}
+
+body {
+	background-color: #000;
 }
 
 code {
@@ -55,13 +55,18 @@ pre code {
 	padding: 0;
 }
 
+table.index th, table.index td {
+	border: none;
+}
+
 table {
 	margin-bottom: 1rem;
 	width: 100%;
 }
 
-table, th, td {
+table th, table td {
 	border: 1px solid #fff;
+	padding: .2rem .4rem;
 }
 
 th[align=center], td[align=center] {
