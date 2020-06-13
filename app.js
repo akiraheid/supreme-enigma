@@ -119,7 +119,7 @@ Metalsmith(__dirname)
 			refer: false,
 		},
 	}))
-	.use(markdown())
+	.use(markdown({ gfm: true }))
 	.use(permalinks())
 	.use(createIndexFiles)
 	.use(layouts({

@@ -39,3 +39,16 @@ pre {
 hr {
 	border-top: 1px solid #fff;
 }
+
+table {
+	margin-bottom: 1rem;
+	width: 100%;
+}
+
+table, th, td {
+	border: 1px solid #fff;
+}
+
+th[align=center], td[align=center] {
+	text-align: center;
+}
