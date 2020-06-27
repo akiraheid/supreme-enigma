@@ -20,7 +20,7 @@ const createIndexFiles = (files, metalsmith) => {
 	files['lists/index.html'].indexData = getIndexData(metadata.lists, keys)
 	files['notes/index.html'].indexData = getIndexData(metadata.notes, keys)
 	files['posts/index.html'].indexData = getIndexData(metadata.posts, keysWDate)
-	files['projects/index.html'].indexData = getIndexData(metadata.projects, [])
+	files['projects/index.html'].indexData = getIndexData(metadata.projects, keys)
 
 	return files
 }
@@ -67,7 +67,7 @@ Metalsmith(__dirname)
 			sortBy: 'date',
 		},
 		projects: {
-			pattern: 'projects/*.md',
+			pattern: ['projects/*.md', '!projects/index.md'],
 			refer: false,
 		},
 	}))
