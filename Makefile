@@ -1,15 +1,16 @@
+name := se-builder
 pack ::= "public.tgz"
 
-build: node_modules
-	node app.js
+build:
+	podman build -t ${name} .
+	podman run --rm --name ${name} \
+		-v $(shell pwd)/:/src/ \
+		${name}
 
 clean:
 	-rm -r build ${pack}
 
 deploy: clean build package upload
-
-node_modules: package.json
-	npm install
 
 package: build
 	cd build && tar -czf ../${pack} .
@@ -22,4 +23,4 @@ upload: package
 	scp ${pack} www:~/prod
 	ssh www "cd ~/prod && tar -xzf ${pack} && rm ${pack}"
 
-.PHONY: clean deploy package serve upload
+.PHONY: build clean deploy package serve upload
