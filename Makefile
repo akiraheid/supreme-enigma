@@ -1,10 +1,12 @@
 name := supreme-enigma
 pack ::= "public.tgz"
 pwd ::= $(shell pwd)
+auditImage = ${name}-audit
 builderImage = ${name}-builder
 updateImage = ${name}-lock-update
+nodeImage = node:17-alpine
 
-app: .env clean
+app: .env Dockerfile clean
 	podman build -t ${builderImage} .
 	-podman stop ${builderImage}
 	-podman rm ${builderImage}
@@ -18,6 +20,12 @@ app: .env clean
 	podman cp ${builderImage}:/src/build/ .
 	podman stop ${builderImage}
 	podman rm ${builderImage}
+
+audit: package-lock.json
+	podman run --rm --name ${auditImage}\
+		-v ${pwd}/package-lock.json:/package-lock.json:ro \
+		--entrypoint "npm" \
+		${nodeImage} audit --package-lock-only
 
 clean:
 	-rm -r build ${pack}
