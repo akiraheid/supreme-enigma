@@ -1,7 +1,9 @@
-FROM alpine:latest
+FROM node:17-alpine
 
-RUN apk add --no-progress -v npm
+WORKDIR /src
 
-COPY image-entrypoint.sh /image-entrypoint.sh
+COPY package* .
 
-ENTRYPOINT ["/image-entrypoint.sh"]
+RUN npm ci
+
+ENTRYPOINT ["node", "app.js"]

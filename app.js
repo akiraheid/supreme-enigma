@@ -3,11 +3,11 @@ const fs = require('fs')
 require('dotenv').config()
 
 const Metalsmith = require('metalsmith')
-const collections = require('metalsmith-collections')
-const layouts = require('metalsmith-layouts')
-const markdown = require('metalsmith-markdown')
-const permalinks = require('metalsmith-permalinks')
 const atomfeed = require('metalsmith-feed-atom')
+const collections = require('@metalsmith/collections')
+const layouts = require('@metalsmith/layouts')
+const markdown = require('@metalsmith/markdown')
+const permalinks = require('@metalsmith/permalinks')
 
 const dest = './build'
 
