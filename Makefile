@@ -4,7 +4,7 @@ pwd ::= $(shell pwd)
 auditImage = ${name}-audit
 builderImage = ${name}-builder
 updateImage = ${name}-lock-update
-nodeImage = node:17-alpine
+nodeImage = docker.io/library/node:17-alpine
 
 app: .env Dockerfile clean
 	podman build -t ${builderImage} .
