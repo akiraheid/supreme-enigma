@@ -21,6 +21,9 @@ app: .env Dockerfile clean
 	podman stop ${builderImage}
 	podman rm ${builderImage}
 
+.env:
+	echo 'SITE_TITLE=Nice\nSITE_URL=https://akira.heid.cc' > ./.env
+
 audit: package-lock.json
 	podman run --rm --name ${auditImage}\
 		-v ${pwd}/package-lock.json:/package-lock.json:ro \
